@@ -222,7 +222,7 @@
 //            return false;
 //        }
 //    }
-//}
+
 
 
 
@@ -237,6 +237,112 @@
 //    {
 //        static void Main(string[] args)
 //        {
+
+
+
+//            // Q6
+
+//            DeliveryCenter center = new DeliveryCenter(10);
+
+//            for (int i = 1; i <= 3; i++)
+//            {
+//                Console.WriteLine($"Enter Shipment {i} Data");
+
+//                Console.Write("Tracking Code: ");
+//                string trackingCode = Console.ReadLine();
+
+//                Console.Write("Description: ");
+//                string description = Console.ReadLine();
+
+//                Console.Write("Weight: ");
+//                double weight = double.Parse(Console.ReadLine());
+
+//                Console.Write("Delivery Fee: ");
+//                decimal deliveryFee = decimal.Parse(Console.ReadLine());
+
+//                Console.Write("City: ");
+//                string city = Console.ReadLine();
+
+//                Console.Write("Street: ");
+//                string street = Console.ReadLine();
+
+//                Console.Write("Building Number: ");
+//                int buildingNumber = int.Parse(Console.ReadLine());
+
+//                DeliveryAddress address =
+//                    new DeliveryAddress(city, street, buildingNumber);
+
+//                Shipment shipment =
+//                    new Shipment(
+//                        trackingCode,
+//                        description,
+//                        weight,
+//                        deliveryFee,
+//                        address);
+
+//                if (center.AddShipment(shipment))
+//                {
+//                    Console.WriteLine("Shipment added successfully.");
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Delivery center is full.");
+//                }
+
+//                Console.WriteLine();
+//            }
+
+
+//            // Print the three shipments
+//            Console.WriteLine("--- All Shipments ---");
+
+//            for (int i = 0; i < 3; i++)
+//            {
+//                center[i].PrintShipment();
+//            }
+
+
+//            // Search by tracking code
+//            Console.Write("Enter a tracking code to search: ");
+//            string searchCode = Console.ReadLine();
+
+//            Shipment foundShipment = center[searchCode];
+
+//            if (foundShipment.TrackingCode != null)
+//            {
+//                Console.WriteLine(
+//                    $"Shipment found: {foundShipment.TrackingCode} - {foundShipment.Description}");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Shipment not found.");
+//            }
+
+
+//            // Struct copy test
+//            Console.WriteLine();
+//            Console.WriteLine("--- Struct Copy Test ---");
+
+//            DeliveryAddress original =
+//                new DeliveryAddress("Cairo", "Tahrir Street", 15);
+
+//            DeliveryAddress copied = original;
+
+//            copied.BuildingNumber = 20;
+//            copied.Street = "Makram Ebeid Street";
+
+//            Console.WriteLine(
+//                $"Original Address: {original.GetFullAddress()}");
+
+//            Console.WriteLine(
+//                $"Copied Address: {copied.GetFullAddress()}");
+//        }
+//    }
+//}
+
+
+
+
 //            DeliveryAddress original =
 //                new DeliveryAddress("Cairo", "Tahrir Street", 15);
 
