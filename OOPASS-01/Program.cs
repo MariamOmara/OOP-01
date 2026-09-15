@@ -132,7 +132,7 @@
 //            Destination = destination;
 //        }
 
-        
+
 
 //        //Q3
 
@@ -154,6 +154,74 @@
 //            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
 //        }
 //    }
+
+
+
+
+//    // Q5
+
+//    public struct DeliveryCenter
+//    {
+//        private Shipment[] _shipments;
+
+//        public DeliveryCenter(int capacity)
+//        {
+//            _shipments = new Shipment[capacity];
+//        }
+
+//        // Integer Indexer
+//        public Shipment this[int index]
+//        {
+//            get
+//            {
+//                if (index >= 0 && index < _shipments.Length)
+//                {
+//                    return _shipments[index];
+//                }
+
+//                return default;
+//            }
+
+//            set
+//            {
+//                if (index >= 0 && index < _shipments.Length)
+//                {
+//                    _shipments[index] = value;
+//                }
+//            }
+//        }
+
+//        // String Indexer
+//        public Shipment this[string trackingCode]
+//        {
+//            get
+//            {
+//                for (int i = 0; i < _shipments.Length; i++)
+//                {
+//                    if (_shipments[i].TrackingCode == trackingCode)
+//                    {
+//                        return _shipments[i];
+//                    }
+//                }
+
+//                return default;
+//            }
+//        }
+
+//        public bool AddShipment(Shipment shipment)
+//        {
+//            for (int i = 0; i < _shipments.Length; i++)
+//            {
+//                if (_shipments[i].TrackingCode == null)
+//                {
+//                    _shipments[i] = shipment;
+//                    return true;
+//                }
+//            }
+
+//            return false;
+//        }
+//    }
 //}
 
 
@@ -165,25 +233,20 @@
 
 
 
+//    internal class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            DeliveryAddress original =
+//                new DeliveryAddress("Cairo", "Tahrir Street", 15);
 
+//            DeliveryAddress copied = original;
 
+//            copied.BuildingNumber = 20;
+//            copied.Street = "Makram Ebeid Street";
 
-
-
-////    internal class Program
-////    {
-////        static void Main(string[] args)
-////        {
-////            DeliveryAddress original =
-////                new DeliveryAddress("Cairo", "Tahrir Street", 15);
-
-////            DeliveryAddress copied = original;
-
-////            copied.BuildingNumber = 20;
-////            copied.Street = "Makram Ebeid Street";
-
-////            Console.WriteLine($"Original Address: {original.GetFullAddress()}");
-////            Console.WriteLine($"Copied Address: {copied.GetFullAddress()}");
-////        }
-////    }
-////}
+//            Console.WriteLine($"Original Address: {original.GetFullAddress()}");
+//            Console.WriteLine($"Copied Address: {copied.GetFullAddress()}");
+//        }
+//    }
+//}
